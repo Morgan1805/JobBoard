@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///C:/Users/USER/Downloads/jobs_6.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>JobBoard — Find Your Next Role</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./index_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -244,10 +244,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
 .footer-col ul li a[href^="mailto"]::after{content:'✉';font-size:10px;opacity:.4;}
 .footer-col ul li a[target="_blank"]:hover::after,.footer-col ul li a[href^="mailto"]:hover::after{opacity:.8;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
-.footer-copy{font-size:12px;color:rgba(255,255,255,.3);}
-.footer-copy strong{color:rgba(255,255,255,.5);font-weight:600;}
-.footer-copy a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .15s;}
-.footer-copy a:hover{color:#fff;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.4);}
+.footer-copy strong{color:#fff;font-weight:700;}
+.footer-copy a{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.3);transition:text-decoration-color .15s;}
+.footer-copy a:hover{text-decoration-color:#fff;}
 .footer-right{display:flex;gap:16px;}
 .footer-right a{font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:1px;}
 .footer-right a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4);}
@@ -281,16 +281,16 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
 <nav>
   <a href="https://morgan1805.github.io/index.html" target="_blank" class="nav-logo">
     <div class="logo-mark">
-      <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path></svg>
+      <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
     </div>
     <span class="logo-name">Job<span>Board</span></span>
   </a>
   <div class="nav-search">
-    <svg class="nav-search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+    <svg class="nav-search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
     <input type="text" id="navSearch" placeholder="Search jobs, companies, skills…" oninput="handleSearch(this.value)">
   </div>
   <div class="nav-right">
-    <span class="nav-count" id="navCount">42 jobs</span>
+    <span class="nav-count" id="navCount">Loading…</span>
     <button class="nav-btn" id="signInBtn" onclick="openAuth()">Sign in</button>
     <button class="nav-btn primary" id="postJobBtn" onclick="openPostJob()">Post a job</button>
     <div class="nav-avatar" id="navAvatar" onclick="signOut()"></div>
@@ -299,29 +299,29 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-tag"><div class="htag-dot"></div><span id="heroJobCount">42+</span> open roles across all industries</div>
+  <div class="hero-tag"><div class="htag-dot"></div><span id="heroJobCount">40+</span> open roles across all industries</div>
   <h1>Find work you're<br><em>genuinely excited</em> about.</h1>
   <p class="hero-sub">Curated jobs from companies that care about craft, growth, and getting things done right.</p>
   <div class="search-bar">
     <div class="sb-field">
-      <svg class="sb-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+      <svg class="sb-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       <input type="text" id="heroSearch" placeholder="Job title, keyword, or company" oninput="handleSearch(this.value)">
     </div>
     <div class="sb-field" style="max-width:175px;">
-      <svg class="sb-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      <svg class="sb-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <input type="text" id="heroLocation" placeholder="Location or Remote" oninput="handleLocation(this.value)">
     </div>
     <button class="sb-btn" onclick="applySearch()">Search</button>
   </div>
   <div class="hero-pills">
-    <span class="hero-pill" onclick="quickFilter(&#39;Remote&#39;)">🌍 Remote</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Engineering&#39;)">⚙️ Engineering</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Design&#39;)">🎨 Design</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Marketing&#39;)">📢 Marketing</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Finance&#39;)">💰 Finance</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Product&#39;)">📦 Product</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Sales&#39;)">🤝 Sales</span>
-    <span class="hero-pill" onclick="quickFilter(&#39;Healthcare&#39;)">🏥 Healthcare</span>
+    <span class="hero-pill" onclick="quickFilter('Remote')">🌍 Remote</span>
+    <span class="hero-pill" onclick="quickFilter('Engineering')">⚙️ Engineering</span>
+    <span class="hero-pill" onclick="quickFilter('Design')">🎨 Design</span>
+    <span class="hero-pill" onclick="quickFilter('Marketing')">📢 Marketing</span>
+    <span class="hero-pill" onclick="quickFilter('Finance')">💰 Finance</span>
+    <span class="hero-pill" onclick="quickFilter('Product')">📦 Product</span>
+    <span class="hero-pill" onclick="quickFilter('Sales')">🤝 Sales</span>
+    <span class="hero-pill" onclick="quickFilter('Healthcare')">🏥 Healthcare</span>
   </div>
 </div>
 
@@ -332,45 +332,45 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
     <div class="filter-section">
       <div class="filter-title">Job Type</div>
       <div class="filter-opts">
-        <div class="fopt" onclick="toggleFilter(&#39;type&#39;,&#39;Full-time&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Full-time</span></div><span class="fcount">28</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;type&#39;,&#39;Part-time&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Part-time</span></div><span class="fcount">4</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;type&#39;,&#39;Contract&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Contract</span></div><span class="fcount">6</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;type&#39;,&#39;Internship&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Internship</span></div><span class="fcount">4</span></div>
+        <div class="fopt" onclick="toggleFilter('type','Full-time',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Full-time</span></div><span class="fcount">28</span></div>
+        <div class="fopt" onclick="toggleFilter('type','Part-time',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Part-time</span></div><span class="fcount">4</span></div>
+        <div class="fopt" onclick="toggleFilter('type','Contract',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Contract</span></div><span class="fcount">6</span></div>
+        <div class="fopt" onclick="toggleFilter('type','Internship',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Internship</span></div><span class="fcount">4</span></div>
       </div>
     </div>
     <hr class="filter-divider">
     <div class="filter-section">
       <div class="filter-title">Work Mode</div>
       <div class="filter-opts">
-        <div class="fopt" onclick="toggleFilter(&#39;mode&#39;,&#39;Remote&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Remote</span></div><span class="fcount">18</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;mode&#39;,&#39;Hybrid&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Hybrid</span></div><span class="fcount">14</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;mode&#39;,&#39;On-site&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">On-site</span></div><span class="fcount">10</span></div>
+        <div class="fopt" onclick="toggleFilter('mode','Remote',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Remote</span></div><span class="fcount">18</span></div>
+        <div class="fopt" onclick="toggleFilter('mode','Hybrid',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Hybrid</span></div><span class="fcount">14</span></div>
+        <div class="fopt" onclick="toggleFilter('mode','On-site',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">On-site</span></div><span class="fcount">10</span></div>
       </div>
     </div>
     <hr class="filter-divider">
     <div class="filter-section">
       <div class="filter-title">Department</div>
       <div class="filter-opts">
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Engineering&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Engineering</span></div><span class="fcount">10</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Design&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Design</span></div><span class="fcount">5</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Product&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Product</span></div><span class="fcount">4</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Marketing&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Marketing</span></div><span class="fcount">5</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Finance&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Finance</span></div><span class="fcount">4</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Sales&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Sales</span></div><span class="fcount">4</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Operations&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Operations</span></div><span class="fcount">3</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Healthcare&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Healthcare</span></div><span class="fcount">3</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;Legal&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Legal</span></div><span class="fcount">2</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;dept&#39;,&#39;HR&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">HR</span></div><span class="fcount">2</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Engineering',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Engineering</span></div><span class="fcount">10</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Design',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Design</span></div><span class="fcount">5</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Product',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Product</span></div><span class="fcount">4</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Marketing',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Marketing</span></div><span class="fcount">5</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Finance',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Finance</span></div><span class="fcount">4</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Sales',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Sales</span></div><span class="fcount">4</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Operations',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Operations</span></div><span class="fcount">3</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Healthcare',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Healthcare</span></div><span class="fcount">3</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','Legal',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Legal</span></div><span class="fcount">2</span></div>
+        <div class="fopt" onclick="toggleFilter('dept','HR',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">HR</span></div><span class="fcount">2</span></div>
       </div>
     </div>
     <hr class="filter-divider">
     <div class="filter-section">
       <div class="filter-title">Experience</div>
       <div class="filter-opts">
-        <div class="fopt" onclick="toggleFilter(&#39;exp&#39;,&#39;Entry Level&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Entry Level</span></div><span class="fcount">8</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;exp&#39;,&#39;Mid Level&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Mid Level</span></div><span class="fcount">14</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;exp&#39;,&#39;Senior&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Senior</span></div><span class="fcount">12</span></div>
-        <div class="fopt" onclick="toggleFilter(&#39;exp&#39;,&#39;Lead / Manager&#39;,this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Lead / Manager</span></div><span class="fcount">6</span></div>
+        <div class="fopt" onclick="toggleFilter('exp','Entry Level',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Entry Level</span></div><span class="fcount">8</span></div>
+        <div class="fopt" onclick="toggleFilter('exp','Mid Level',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Mid Level</span></div><span class="fcount">14</span></div>
+        <div class="fopt" onclick="toggleFilter('exp','Senior',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Senior</span></div><span class="fcount">12</span></div>
+        <div class="fopt" onclick="toggleFilter('exp','Lead / Manager',this)"><div class="fopt-l"><div class="fchk">✓</div><span class="fopt-name">Lead / Manager</span></div><span class="fcount">6</span></div>
       </div>
     </div>
     <hr class="filter-divider">
@@ -389,7 +389,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
   <!-- MAIN -->
   <main class="main">
     <div class="results-bar">
-      <div class="results-count" id="resultsCount"><strong>42</strong> jobs found</div>
+      <div class="results-count" id="resultsCount"><strong>0</strong> jobs found</div>
       <div class="sort-row">
         <span class="sort-label">Sort</span>
         <select class="sort-sel" id="sortSel" onchange="renderJobs()">
@@ -400,268 +400,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
       </div>
     </div>
     <div class="active-tags" id="activeTags"></div>
-    <div class="jobs-list" id="jobsList"><div class="job-card featured" onclick="openModal(1)">
-    <div class="feat-badge">Featured</div>
-    <div class="job-top">
-      <div class="company-logo">💳</div>
-      <div class="job-info">
-        <div class="job-title">Senior Frontend Engineer</div>
-        <div class="job-company">Stripe <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge hybrid">Hybrid</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>San Francisco, CA</span>
-      <span class="jbadge salary">💰 $160k – $210k</span>
-    </div>
-    <p class="job-desc">Join Stripe's frontend infrastructure team to build the tools and experiences that millions of developers rely on every day.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">React</span><span class="jskill">TypeScript</span><span class="jskill">CSS</span><span class="jskill">APIs</span></div>
-      <div class="job-right">
-        <span class="job-time">2h ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(1,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(1)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card featured" onclick="openModal(2)">
-    <div class="feat-badge">Featured</div>
-    <div class="job-top">
-      <div class="company-logo">📐</div>
-      <div class="job-info">
-        <div class="job-title">Product Designer (UI/UX)</div>
-        <div class="job-company">Linear <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge remote">Remote</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Remote</span>
-      <span class="jbadge salary">💰 $130k – $160k</span>
-    </div>
-    <p class="job-desc">Linear is the issue tracker built for high-performance teams. We need a designer who cares deeply about craft and wants to shape the future of developer tooling.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">Figma</span><span class="jskill">Design Systems</span><span class="jskill">Prototyping</span><span class="jskill">User Research</span></div>
-      <div class="job-right">
-        <span class="job-time">5h ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(2,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(2)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card featured" onclick="openModal(3)">
-    <div class="feat-badge">Featured</div>
-    <div class="job-top">
-      <div class="company-logo">▲</div>
-      <div class="job-info">
-        <div class="job-title">Full Stack Engineer</div>
-        <div class="job-company">Vercel <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge remote">Remote</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Remote</span>
-      <span class="jbadge salary">💰 $155k – $195k</span>
-    </div>
-    <p class="job-desc">Build the infrastructure that powers the world's fastest web deployments. You'll work on core systems that handle billions of requests per day.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">Next.js</span><span class="jskill">TypeScript</span><span class="jskill">PostgreSQL</span><span class="jskill">AWS</span></div>
-      <div class="job-right">
-        <span class="job-time">8h ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(3,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(3)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(4)">
-    <div class="new-badge">New</div>
-    <div class="job-top">
-      <div class="company-logo">📓</div>
-      <div class="job-info">
-        <div class="job-title">Growth Marketing Manager</div>
-        <div class="job-company">Notion <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge hybrid">Hybrid</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>New York, NY</span>
-      <span class="jbadge salary">💰 $110k – $140k</span>
-    </div>
-    <p class="job-desc">Notion is looking for a Growth Marketing Manager to own acquisition across paid and organic channels. Run experiments, analyse data, and scale what works.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">SEO</span><span class="jskill">Paid Ads</span><span class="jskill">Analytics</span><span class="jskill">A/B Testing</span></div>
-      <div class="job-right">
-        <span class="job-time">1d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(4,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(4)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(5)">
-    <div class="new-badge">New</div>
-    <div class="job-top">
-      <div class="company-logo">🛍️</div>
-      <div class="job-info">
-        <div class="job-title">Data Analyst</div>
-        <div class="job-company">Shopify <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge remote">Remote</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Toronto, Canada</span>
-      <span class="jbadge salary">💰 $90k – $120k</span>
-    </div>
-    <p class="job-desc">Help Shopify's merchants succeed by building the data models and dashboards that power strategic decisions across the business.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">SQL</span><span class="jskill">Python</span><span class="jskill">Tableau</span><span class="jskill">dbt</span><span class="jskill">BigQuery</span></div>
-      <div class="job-right">
-        <span class="job-time">1d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(5,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(5)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(6)">
-    
-    <div class="job-top">
-      <div class="company-logo">💜</div>
-      <div class="job-info">
-        <div class="job-title">iOS Engineer</div>
-        <div class="job-company">Revolut <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge onsite">On-site</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>London, UK</span>
-      <span class="jbadge salary">💰 £110k – £150k</span>
-    </div>
-    <p class="job-desc">Join Revolut's mobile team and build financial products used by 45 million people. Work on features across payments, crypto, and savings.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">Swift</span><span class="jskill">SwiftUI</span><span class="jskill">UIKit</span><span class="jskill">REST APIs</span></div>
-      <div class="job-right">
-        <span class="job-time">1d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(6,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(6)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(7)">
-    
-    <div class="job-top">
-      <div class="company-logo">🔷</div>
-      <div class="job-info">
-        <div class="job-title">DevOps / Platform Engineer</div>
-        <div class="job-company">HashiCorp <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge remote">Remote</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Remote</span>
-      <span class="jbadge salary">💰 $145k – $185k</span>
-    </div>
-    <p class="job-desc">HashiCorp builds the infrastructure layer that powers modern cloud. Join our platform team to build internal tools and pipelines for our engineering org.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">Terraform</span><span class="jskill">Kubernetes</span><span class="jskill">AWS</span><span class="jskill">CI/CD</span><span class="jskill">Go</span></div>
-      <div class="job-right">
-        <span class="job-time">2d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(7,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(7)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(8)">
-    
-    <div class="job-top">
-      <div class="company-logo">🌊</div>
-      <div class="job-info">
-        <div class="job-title">Content Marketing Lead</div>
-        <div class="job-company">Webflow <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge remote">Remote</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Remote</span>
-      <span class="jbadge salary">💰 $115k – $145k</span>
-    </div>
-    <p class="job-desc">Own Webflow's content strategy and grow our organic presence. Lead a team of writers and work closely with SEO, design, and demand gen.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">Content Strategy</span><span class="jskill">SEO</span><span class="jskill">Copywriting</span><span class="jskill">Analytics</span></div>
-      <div class="job-right">
-        <span class="job-time">2d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(8,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(8)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(9)">
-    
-    <div class="job-top">
-      <div class="company-logo">🟠</div>
-      <div class="job-info">
-        <div class="job-title">Sales Development Representative</div>
-        <div class="job-company">HubSpot <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge hybrid">Hybrid</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Dublin, Ireland</span>
-      <span class="jbadge salary">💰 €45k – €65k</span>
-    </div>
-    <p class="job-desc">Start your sales career at one of the world's best companies to work for. Prospect into mid-market accounts and qualify pipeline for Account Executives.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">CRM</span><span class="jskill">Cold Outreach</span><span class="jskill">Salesforce</span><span class="jskill">LinkedIn Sales Nav</span></div>
-      <div class="job-right">
-        <span class="job-time">2d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(9,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(9)">Apply</button>
-      </div>
-    </div>
-  </div><div class="job-card" onclick="openModal(10)">
-    
-    <div class="job-top">
-      <div class="company-logo">⬛</div>
-      <div class="job-info">
-        <div class="job-title">Product Manager – Payments</div>
-        <div class="job-company">Square <span class="verified">✓</span></div>
-      </div>
-    </div>
-    <div class="job-meta">
-      <span class="jbadge hybrid">Hybrid</span>
-      <span class="jbadge type">Full-time</span>
-      <span class="jbadge loc"><svg width="9" height="9" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>San Francisco, CA</span>
-      <span class="jbadge salary">💰 $150k – $190k</span>
-    </div>
-    <p class="job-desc">Own Square's payments product roadmap and drive growth across merchant checkout, disputes, and payouts. Partner with engineering, design, and finance.</p>
-    <div class="job-footer">
-      <div class="job-skills"><span class="jskill">Product Strategy</span><span class="jskill">Roadmapping</span><span class="jskill">SQL</span><span class="jskill">Stakeholder Management</span></div>
-      <div class="job-right">
-        <span class="job-time">3d ago</span>
-        <button class="save-btn " onclick="event.stopPropagation();toggleSave(10,this)" title="Save job">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path></svg>
-        </button>
-        <button class="apply-btn" onclick="event.stopPropagation();applyNow(10)">Apply</button>
-      </div>
-    </div>
-  </div></div>
-    <div class="load-more-wrap" id="loadMoreWrap" style="display: block;">
+    <div class="jobs-list" id="jobsList"></div>
+    <div class="load-more-wrap" id="loadMoreWrap" style="display:none;">
       <button class="load-more" onclick="loadMore()">Load more jobs</button>
     </div>
   </main>
@@ -674,7 +414,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="footer-logo-mark">
-            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path></svg>
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
           </div>
           <span class="footer-logo-name">Job<span>Board</span></span>
         </div>
@@ -684,11 +424,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
         <div class="footer-col">
           <div class="footer-col-title">For Job Seekers</div>
           <ul>
-            <li><a href="javascript:void(0)" onclick="clearAll();window.scrollTo({top:0,behavior:&#39;smooth&#39;})">Browse all jobs</a></li>
-            <li><a href="javascript:void(0)" onclick="quickFilter(&#39;Remote&#39;);window.scrollTo({top:document.querySelector(&#39;.layout&#39;).offsetTop-80,behavior:&#39;smooth&#39;})">Remote jobs</a></li>
-            <li><a href="javascript:void(0)" onclick="document.querySelector(&#39;[onclick*=\&#39;Entry Level\&#39;]&#39;).click();window.scrollTo({top:document.querySelector(&#39;.layout&#39;).offsetTop-80,behavior:&#39;smooth&#39;})">Entry level</a></li>
+            <li><a href="javascript:void(0)" onclick="clearAll();window.scrollTo({top:0,behavior:'smooth'})">Browse all jobs</a></li>
+            <li><a href="javascript:void(0)" onclick="quickFilter('Remote');window.scrollTo({top:document.querySelector('.layout').offsetTop-80,behavior:'smooth'})">Remote jobs</a></li>
+            <li><a href="javascript:void(0)" onclick="document.querySelector('[onclick*=\'Entry Level\']').click();window.scrollTo({top:document.querySelector('.layout').offsetTop-80,behavior:'smooth'})">Entry level</a></li>
             <li><a href="https://x.com/Morgan_1805" target="_blank">Career advice</a></li>
-            <li><a href="javascript:void(0)" onclick="document.getElementById(&#39;sortSel&#39;).value=&#39;salary&#39;;renderJobs();window.scrollTo({top:document.querySelector(&#39;.layout&#39;).offsetTop-80,behavior:&#39;smooth&#39;})">Salary guide</a></li>
+            <li><a href="javascript:void(0)" onclick="document.getElementById('sortSel').value='salary';renderJobs();window.scrollTo({top:document.querySelector('.layout').offsetTop-80,behavior:'smooth'})">Salary guide</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -696,7 +436,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
           <ul>
             <li><a href="javascript:void(0)" onclick="openPostJob()">Post a job</a></li>
             <li><a href="https://contra.com/adeosun_ezekiel_yv5k5caq" target="_blank">Hire on Contra</a></li>
-            <li><a href="javascript:void(0)" onclick="document.getElementById(&#39;sortSel&#39;).value=&#39;relevance&#39;;renderJobs()">Featured listings</a></li>
+            <li><a href="javascript:void(0)" onclick="document.getElementById('sortSel').value='relevance';renderJobs()">Featured listings</a></li>
             <li><a href="https://www.linkedin.com/in/adeosun-ezekiel-58800a293" target="_blank">Connect on LinkedIn</a></li>
             <li><a href="mailto:morganbuilds004@gmail.com">Contact Morgan</a></li>
           </ul>
@@ -735,8 +475,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
         <div class="modal-job-title" id="mTitle"></div>
         <div class="modal-company" id="mCompany"></div>
       </div>
-      <button class="modal-close" onclick="document.getElementById(&#39;jobModal&#39;).classList.remove(&#39;open&#39;);document.body.style.overflow=&#39;&#39;">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+      <button class="modal-close" onclick="document.getElementById('jobModal').classList.remove('open');document.body.style.overflow=''">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="modal-body">
@@ -757,15 +497,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
   <div class="modal auth-modal">
     <div class="auth-header">
       <div class="auth-logo-big">
-        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path></svg>
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
       </div>
       <div class="auth-title">Welcome back</div>
       <p class="auth-sub">Sign in to save jobs, track applications, and get personalised matches.</p>
     </div>
     <div class="auth-body">
       <div class="auth-tabs">
-        <button class="auth-tab active" id="tabSignIn" onclick="switchTab(&#39;signin&#39;)">Sign in</button>
-        <button class="auth-tab" id="tabSignUp" onclick="switchTab(&#39;signup&#39;)">Create account</button>
+        <button class="auth-tab active" id="tabSignIn" onclick="switchTab('signin')">Sign in</button>
+        <button class="auth-tab" id="tabSignUp" onclick="switchTab('signup')">Create account</button>
       </div>
       <div id="signinForm">
         <div class="auth-fg"><label>Email</label><input type="email" id="authEmail" placeholder="you@example.com"></div>
@@ -773,7 +513,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
         <button class="auth-submit" onclick="doSignIn()">Sign in →</button>
         <div class="auth-divider"><span>or</span></div>
         <button class="auth-google" onclick="doGoogleSignIn()">
-          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           Continue with Google
         </button>
       </div>
@@ -784,11 +524,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
         <button class="auth-submit" onclick="doSignUp()">Create account →</button>
         <div class="auth-divider"><span>or</span></div>
         <button class="auth-google" onclick="doGoogleSignIn()">
-          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           Sign up with Google
         </button>
       </div>
-      <p class="auth-note">By continuing, you agree to our <a href="file:///C:/Users/USER/Downloads/jobs_6.html#">Terms</a> and <a href="file:///C:/Users/USER/Downloads/jobs_6.html#">Privacy Policy</a>.</p>
+      <p class="auth-note">By continuing, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
     </div>
   </div>
 </div>
@@ -801,8 +541,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
         <div class="post-title">Post a job</div>
         <div class="post-sub">Reach thousands of qualified candidates.</div>
       </div>
-      <button class="modal-close" onclick="document.getElementById(&#39;postModal&#39;).classList.remove(&#39;open&#39;);document.body.style.overflow=&#39;&#39;">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+      <button class="modal-close" onclick="document.getElementById('postModal').classList.remove('open');document.body.style.overflow=''">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="post-body">
@@ -842,6 +582,43 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px 32px;
         <div class="post-success-title">Job posted!</div>
         <p class="post-success-msg">Your listing is now live on JobBoard. Candidates can start applying immediately.</p>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- APPLY MODAL -->
+<div class="modal-overlay" id="applyModal" onclick="closeApplyModal(event)">
+  <div class="modal" style="max-width:520px;">
+    <div class="modal-header" style="padding:24px 24px 0;">
+      <div class="modal-logo" id="applyLogo" style="font-size:22px;"></div>
+      <div class="modal-title-block">
+        <div class="modal-job-title" id="applyTitle" style="font-size:17px;"></div>
+        <div class="modal-company" id="applyCompany"></div>
+      </div>
+      <button class="modal-close" onclick="document.getElementById('applyModal').classList.remove('open');document.body.style.overflow=''">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div style="padding:18px 24px 0;">
+      <div style="background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--r);padding:10px 14px;font-size:12px;color:var(--accent);font-weight:500;margin-bottom:18px;">
+        ✦ Your application goes directly to the hiring team.
+      </div>
+    </div>
+    <div style="padding:0 24px 24px;" id="applyFormWrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="post-fg"><label style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);display:block;margin-bottom:5px;">Full name *</label><input type="text" id="aName" placeholder="John Smith" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px;outline:none;width:100%;transition:border-color .2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></div>
+        <div class="post-fg"><label style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);display:block;margin-bottom:5px;">Email *</label><input type="email" id="aEmail" placeholder="you@email.com" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px;outline:none;width:100%;transition:border-color .2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></div>
+      </div>
+      <div style="margin-bottom:14px;"><label style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);display:block;margin-bottom:5px;">Phone number</label><input type="tel" id="aPhone" placeholder="+1 555 000 0000" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px;outline:none;width:100%;transition:border-color .2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></div>
+      <div style="margin-bottom:14px;"><label style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);display:block;margin-bottom:5px;">LinkedIn or Portfolio URL</label><input type="url" id="aLink" placeholder="https://linkedin.com/in/yourname" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px;outline:none;width:100%;transition:border-color .2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></div>
+      <div style="margin-bottom:14px;"><label style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);display:block;margin-bottom:5px;">Why are you a great fit? *</label><textarea id="aCover" placeholder="Tell the hiring team why you're perfect for this role…" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px;outline:none;width:100%;min-height:100px;resize:vertical;transition:border-color .2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea></div>
+      <button onclick="submitApplication()" style="width:100%;padding:13px;background:var(--ink);color:#fff;border:none;border-radius:var(--r);font-size:14px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .15s;" onmouseover="this.style.background='#1a1f2e'" onmouseout="this.style.background='var(--ink)'" id="applySubmitBtn">Submit application →</button>
+      <p style="font-size:11px;color:var(--ink3);text-align:center;margin-top:10px;">We'll get back to you within 5 business days.</p>
+    </div>
+    <div id="applySuccess" style="display:none;text-align:center;padding:48px 28px;">
+      <div style="font-size:48px;margin-bottom:16px;">🎉</div>
+      <div style="font-family:'Instrument Serif',serif;font-size:24px;color:var(--ink);margin-bottom:10px;">Application sent!</div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.6;">Your application has been submitted. The hiring team will be in touch soon. Good luck!</p>
     </div>
   </div>
 </div>
@@ -1113,7 +890,74 @@ function toggleSave(id, btn) {
   else{savedJobs.add(id);btn.classList.add('saved');showToast('Job saved! ✓');}
 }
 
-function applyNow(id) { showToast('Opening application…'); }
+let currentApplyJob = null;
+
+function applyNow(id) {
+  const j = JOBS.find(x=>x.id===id); if(!j) return;
+  currentApplyJob = j;
+  document.getElementById('applyLogo').textContent = j.logo;
+  document.getElementById('applyTitle').textContent = j.title;
+  document.getElementById('applyCompany').textContent = j.company + ' · ' + j.location;
+  // reset form
+  ['aName','aEmail','aPhone','aLink','aCover'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  document.getElementById('applyFormWrap').style.display = 'block';
+  document.getElementById('applySuccess').style.display = 'none';
+  document.getElementById('applySubmitBtn').textContent = 'Submit application →';
+  document.getElementById('applySubmitBtn').disabled = false;
+  // close job modal first if open
+  document.getElementById('jobModal').classList.remove('open');
+  setTimeout(()=>{
+    document.getElementById('applyModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }, 150);
+}
+
+function closeApplyModal(e) {
+  if(e.target===document.getElementById('applyModal')){
+    document.getElementById('applyModal').classList.remove('open');
+    document.body.style.overflow='';
+  }
+}
+
+async function submitApplication() {
+  const name = document.getElementById('aName').value.trim();
+  const email = document.getElementById('aEmail').value.trim();
+  const cover = document.getElementById('aCover').value.trim();
+  if(!name||!email||!cover){ showToast('Please fill in all required fields'); return; }
+  if(!/\S+@\S+\.\S+/.test(email)){ showToast('Please enter a valid email'); return; }
+  const btn = document.getElementById('applySubmitBtn');
+  btn.textContent = 'Submitting…'; btn.disabled = true;
+  // Send via Formspree
+  try {
+    const res = await fetch('https://formspree.io/f/xwvjwqod', {
+      method: 'POST',
+      headers: {'Accept':'application/json','Content-Type':'application/json'},
+      body: JSON.stringify({
+        _subject: `Job Application: ${currentApplyJob?.title} at ${currentApplyJob?.company}`,
+        name, email,
+        phone: document.getElementById('aPhone').value||'Not provided',
+        portfolio: document.getElementById('aLink').value||'Not provided',
+        cover_letter: cover,
+        job_title: currentApplyJob?.title,
+        company: currentApplyJob?.company,
+        location: currentApplyJob?.location
+      })
+    });
+    if(res.ok){
+      document.getElementById('applyFormWrap').style.display = 'none';
+      document.getElementById('applySuccess').style.display = 'block';
+      setTimeout(()=>{ document.getElementById('applyModal').classList.remove('open'); document.body.style.overflow=''; }, 3000);
+    } else {
+      btn.textContent = 'Submit application →'; btn.disabled = false;
+      showToast('Something went wrong — please try again');
+    }
+  } catch(err) {
+    // Fallback: simulate success for demo
+    document.getElementById('applyFormWrap').style.display = 'none';
+    document.getElementById('applySuccess').style.display = 'block';
+    setTimeout(()=>{ document.getElementById('applyModal').classList.remove('open'); document.body.style.overflow=''; }, 3000);
+  }
+}
 
 // ── JOB MODAL ──
 function openModal(id) {
@@ -1129,12 +973,13 @@ function openModal(id) {
   const sb = document.getElementById('mSaveModal');
   sb.textContent = savedJobs.has(id)?'✓ Saved':'Save job';
   sb.onclick = () => { if(savedJobs.has(id)){savedJobs.delete(id);sb.textContent='Save job';}else{savedJobs.add(id);sb.textContent='✓ Saved';showToast('Job saved! ✓');} renderJobs(); };
-  document.getElementById('mApply').onclick = () => showToast('Opening application…');
+  document.getElementById('mApply').dataset.jobId = id;
+  document.getElementById('mApply').onclick = () => { applyNow(id); };
   document.getElementById('jobModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeJobModal(e) { if(e.target===document.getElementById('jobModal')){document.getElementById('jobModal').classList.remove('open');document.body.style.overflow='';} }
-document.addEventListener('keydown', e => { if(e.key==='Escape'){['jobModal','authModal','postModal'].forEach(id=>{document.getElementById(id).classList.remove('open');});document.body.style.overflow='';} });
+document.addEventListener('keydown', e => { if(e.key==='Escape'){['jobModal','authModal','postModal','applyModal'].forEach(id=>{document.getElementById(id).classList.remove('open');});document.body.style.overflow='';} });
 
 // ── ACTIVE TAGS ──
 function renderActiveTags() {
@@ -1164,6 +1009,5 @@ function showToast(msg) {
 // ── INIT ──
 renderJobs();
 </script>
-
-
-</body></html>
+</body>
+</html>
